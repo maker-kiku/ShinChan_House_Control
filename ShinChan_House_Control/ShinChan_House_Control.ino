@@ -3,7 +3,7 @@
 //Neopixel
 #define NEO_PIN 12 //네오픽셀 연결 번호
 
-#define LEDNUM 13 //LED 개수
+#define LEDNUM 15 //LED 개수
 
 // G R B
 // 255 255 0
@@ -32,7 +32,7 @@ void loop() {
     digitalWrite(LED_BUILTIN, 1);
     if(Led_Count > 10) Led_Count = 0;
     else Led_Count++;
-    delay(100);
+    delay(500);
   }
   
   if(Led_Count == 1) NeopixelFunc(1, 0, 0, 0, 0, 0, 0);
@@ -65,19 +65,19 @@ void NeopixelFunc(bool a, bool b, bool c, bool d, bool e, bool f, bool g) {
     if(c) strip.setPixelColor(i, strip.Color(150, 255, 50)); 
     else strip.setPixelColor(i, strip.Color(0, 0, 0)); 
   } // 1층 안방  
-  for (int i = 5; i < 8; i++) {
+  for (int i = 5; i < 9; i++) {
     if(d) strip.setPixelColor(i, strip.Color(150, 255, 50)); 
     else strip.setPixelColor(i, strip.Color(0, 0, 0)); 
   } // 1층 거실 
-  for (int i = 8; i < 9; i++) {
+  for (int i = 9; i < 10; i++) {
     if(e) strip.setPixelColor(i, strip.Color(150, 255, 50)); 
     else strip.setPixelColor(i, strip.Color(0, 0, 0)); 
   } // 1층 복도 
-  for (int i = 9; i < 12; i++) {
+  for (int i = 10; i < 13; i++) {
     if(f) strip.setPixelColor(i, strip.Color(150, 255, 50)); 
     else strip.setPixelColor(i, strip.Color(0, 0, 0)); 
   } // 2층 창고 
-  for (int i = 12; i < 14; i++) {
+  for (int i = 13; i < 15; i++) {
     if(g) strip.setPixelColor(i, strip.Color(150, 255, 50)); 
     else strip.setPixelColor(i, strip.Color(0, 0, 0)); 
   } // 2층 서재  
